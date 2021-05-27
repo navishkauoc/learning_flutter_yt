@@ -12,9 +12,23 @@ class QuoteList extends StatefulWidget {
 }
 
 class _QuoteListState extends State<QuoteList> {
+
+  List<String> quotes = [
+    'Be yourself, everyone else is already taken',
+    'If you wanna lead, learn to follow',
+    'Not everybody needs to know your success'
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: AppBar(
+        title: Text('Awesome Quotes'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
+      ),
+    );
   }
 }
 
