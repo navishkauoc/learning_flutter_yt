@@ -21,7 +21,7 @@ class _QuoteListState extends State<QuoteList> {
   ];
 
   Widget quoteTemplate(quote) {
-    return QuoteCard();
+    return QuoteCard(quote: quote);
   }
 
   @override
@@ -41,9 +41,10 @@ class _QuoteListState extends State<QuoteList> {
 }
 
 class QuoteCard extends StatelessWidget {
-  const QuoteCard({
-    Key key,
-  }) : super(key: key);
+
+  final Quote quote;
+  QuoteCard({this.quote});
+
 
   @override
   Widget build(BuildContext context) {
